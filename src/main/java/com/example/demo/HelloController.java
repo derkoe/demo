@@ -13,11 +13,6 @@ public class HelloController {
 
     @GetMapping
     public String hello(@RequestParam(name = "name", required = false) String name) {
-        return "Hello, " + (name == null ? defaultName : name) + "!";
-    }
-
-    @PostMapping
-    public void changeDefault(@RequestBody String name) {
-        defaultName = name;
+        return "Hello, " + (name == null ? "World" : name) + "!";
     }
 }
